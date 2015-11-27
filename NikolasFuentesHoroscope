@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class NikolasFuentesHoroscope {
+   public static void main (String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+      String [] Zodiac = {"Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces", "Ophiuchus"};
+      while (true) {
+         System.out.println("What is your sign? [be sure to capitalize]");
+         String sign = keyboard.nextLine();
+         for (String i : Zodiac) {
+            if (sign == i) {
+               //Horoscope(sign);
+               System.out.println("People with the sign " + sign + " are often ");
+               Horoscope(sign);
+            } else {
+               break;
+            }
+         }
+       //break;
+      }
+   }
+   
+   
+   public static void Horoscope (String inputSign){
+      String charact = "VOID";
+      int j = (int)(12 * Math.random() + 1);
+         if (j == 1) {
+            charact = "balanced";
+         } else if (j == 2) {
+            charact = "discret";
+         } else if (j == 3) {
+            charact = "obliging";
+         } else if (j == 4) {
+            charact ="nosy";
+         } else if (j == 5) {
+            charact = "quarrelsome";
+         } else if (j == 6) {
+            charact = "tactful";
+         } else if (j == 7) {
+            charact = "diligent";
+         } else if (j == 8) {
+            charact = "analytical";
+         } else if (j == 9) {
+            charact = "leery";
+         } else if (j == 10) {
+            charact = "heartful";
+         } else if (j == 11) {
+            charact = "sullen";
+         } else {
+            charact = "warmhearted";
+         }
+      System.out.print(charact);
+      //return charact;
+      //System.out.println("People with the sign " + inputSign + " are often " + charact);
+   }
+}
